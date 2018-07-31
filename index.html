@@ -2,17 +2,18 @@
 layout: default
 ---
 
-<div class="posts">
+<div class="posts" style="background: #fefefe;">
   {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  <h1 style="line-height: 2rem; text-align: left; margin-top: 3rem; margin-left: -0.4rem;"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+  <div class="date" style="text-transform: uppercase; font-size: 0.75rem; opacity: 0.5; text-align: left;">
+    {{ post.date | date: "%B %e, %Y" }}
+  </div>
+  <div class="entry" style="margin-top: 1rem; text-align: left;">
+    {{ post.excerpt }}
+  </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+  <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}" style="background: transparent; color: black; border: 1px solid; padding: 0.7rem; text-transform: uppercase; font-size: 0.65rem; opacity: 0.4;">Read More</a>
+  </article>
   {% endfor %}
 </div>

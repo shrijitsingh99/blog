@@ -1,51 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html class="no-js" lang="en">
 
-    {% include meta.html %}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Shrijit Singh" />
+  <meta name="description" content="Shrijit Singh - Developer" />
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/foundation.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+</head>
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
-
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+<body style="background: #2a2a2a;">
+  <div class="container text-center" style="max-width: 1040px; background: #fefefe; margin: 0 auto; margin-top: 80px; border-radius: 10px;">
+    <section class="header" id="header" style="height: 25rem; border-bottom: 1px solid; border-color: rgba(0, 0, 0, 0.25); margin-bottom: 2rem;">
+      <div id="cover-background" class="cover-background" style="opacity: 0.5;">
+        <canvas id="cover-canvas">
+          </canvas>
       </div>
-    </div>
+      <div class="header-content" style="height: 25rem; transform: translate(0, -100%); padding-top: 6rem;">
+        <h1 style="font-size: 8rem; font-weight: 700;line-height: 120px; margin: 0;">Shrijit Singh</h1>
+        <h3 style="font-variant: normal; font-weight: 300;">Computer Science Undergraduate</h3>
 
-    <div id="main" role="main" class="container">
+        <ul class="menu align-center" style="margin-top: 6rem; font-variant: small-caps; font-size: 1.1rem;">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Resume</a></li>
+          <li><a href="/">Portfolio</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div>
+    </section>
+    <section id="blog" class="container" style="max-width: 840px; margin: 3.5rem auto; padding-bottom: 3rem;">
       {{ content }}
-    </div>
+    </section>
+  </div>
+  </div>
+</body>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+<script src="{{ site.baseurl }}/js/TweenLite.min.js"></script>
+<script src="{{ site.baseurl }}/js/EasePack.min.js"></script>
+<script src="{{ site.baseurl }}/js/cover.js"></script>
 
-    {% include analytics.html %}
-  </body>
 </html>

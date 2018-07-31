@@ -1,0 +1,46 @@
+/* General */
+
+.white {
+  color: #ffffff;
+}
+
+.black {
+  color: #2a2a2a;
+}
+
+/* Fonts */
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: Roboto Condensed, sans-serif;
+  font-weight: 100;
+  color: #2a2a2a;
+}
+
+h1, h2, h3, h4 {
+  font-variant: small-caps;
+}
+
+@media screen and (max-width: 39.9375em) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Body */
+
+body {
+  color: #2a2a2a;
+}
+
+a{
+  color: black;
+}
